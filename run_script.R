@@ -59,3 +59,4 @@ tidydata <- c("subject","activity")
 aggregate_dataset <- aggregate_dataset[,!(names(aggregate_dataset) %in% tidydata)]
 aggregate_dataset = merge(aggregate_dataset, activity_labels)
 write.csv(file="requiredtidydataset.csv", x=aggregate_dataset)
+write.table(x=aggregate_dataset,file="required_tidy_dataset.txt",row.names = FALSE)
